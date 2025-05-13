@@ -4,7 +4,7 @@ This is a digital board game inspired by Ray Bradbury's novel "Fahrenheit 451." 
 
 ## Game Features
 
-- Interactive board game with branching paths (similar to Game of Life/Mario Party)
+- Interactive board game with branching paths 
 - Character selection with unique abilities from Fahrenheit 451
 - Trivia questions based on the novel
 - Shop system using knowledge points to buy items from the book
