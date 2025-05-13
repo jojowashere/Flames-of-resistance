@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flames of Resistance: A Fahrenheit 451 Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Flames of Resistance</h1>
+            <h2>A Board Game Inspired by Fahrenheit 451</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="start-game-btn">Start Game</a></li>
+                    <li><a href="pages/rules.html" target="_blank">Rules</a></li>
+                    <li><a href="pages/reflection.html" target="_blank">Reflection</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="game-setup" id="game-setup">
+            <h2>Game Setup</h2>
+            <div class="player-setup">
+                <h3>Select Number of Players (2-4):</h3>
+                <div class="player-count-selector">
+                    <button class="player-count-btn" data-count="2">2</button>
+                    <button class="player-count-btn" data-count="3">3</button>
+                    <button class="player-count-btn" data-count="4">4</button>
+                </div>
+                
+                <div id="player-forms-container" class="player-forms-container">
+                    <!-- Player forms will be generated here via JavaScript -->
+                </div>
+                
+                <button id="confirm-players-btn" class="confirm-btn" disabled>Confirm Players</button>
+            </div>
+        </div>
+
+        <div id="character-selection" class="character-selection hidden">
+            <h2>Select Your Character</h2>
+            <div class="characters-grid" id="characters-grid">
+                <!-- Characters will be loaded here via JavaScript -->
+            </div>
+        </div>
+
+        <div id="game-board" class="game-board hidden">
+            <div class="board-header">
+                <div class="game-info">
+                    <h3>Current Player: <span id="current-player-name">Player 1</span></h3>
+                    <h3>Character: <span id="current-player-character">Character</span></h3>
+                </div>
+                <div class="game-controls">
+                    <button id="roll-dice-btn" class="action-btn">Roll Dice</button>
+                    <button id="end-turn-btn" class="action-btn" disabled>End Turn</button>
+                </div>
+            </div>
+            
+            <div class="main-board-area">
+                <div class="board-grid" id="board-grid">
+                    <!-- Board spaces will be generated here -->
+                </div>
+                
+                <div class="game-sidebar">
+                    <div class="dice-container">
+                        <div id="dice" class="dice">
+                            <div class="dice-result" id="dice-result">?</div>
+                        </div>
+                    </div>
+                    
+                    <div class="players-status" id="players-status">
+                        <!-- Player status will be updated here -->
+                    </div>
+                    
+                    <div class="knowledge-meter">
+                        <h3>Resistance Knowledge</h3>
+                        <div class="meter-container">
+                            <div id="knowledge-progress" class="meter-progress"></div>
+                        </div>
+                        <p><span id="knowledge-value">0</span> / <span id="knowledge-target">30</span></p>
+                    </div>
+                    
+                    <div class="censorship-meter">
+                        <h3>Censorship Level</h3>
+                        <div class="meter-container">
+                            <div id="censorship-progress" class="meter-progress danger"></div>
+                        </div>
+                        <p><span id="censorship-value">0</span> / <span id="censorship-max">20</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="trivia-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2>Fahrenheit 451 Trivia Challenge</h2>
+                <div id="trivia-question" class="trivia-question"></div>
+                <div id="trivia-options" class="trivia-options"></div>
+                <div id="trivia-result" class="trivia-result hidden"></div>
+                <button id="trivia-continue-btn" class="action-btn hidden">Continue</button>
+            </div>
+        </div>
+
+        <div id="event-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2>Event Card</h2>
+                <div id="event-description" class="event-description"></div>
+                <button id="event-continue-btn" class="action-btn">Continue</button>
+            </div>
+        </div>
+
+        <div id="game-over-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2 id="game-result-title">Game Over</h2>
+                <p id="game-result-message"></p>
+                <div id="final-scores"></div>
+                <button id="new-game-btn" class="action-btn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Flames of Resistance: A board game inspired by Ray Bradbury's "Fahrenheit 451"</p>
+    </footer>
+
+    <script src="js/characters.js"></script>
+    <script src="js/trivia.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

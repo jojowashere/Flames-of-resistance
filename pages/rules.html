@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Rules - Flames of Resistance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2f3640;
+            background: linear-gradient(135deg, #1e272e 0%, #2c3e50 100%);
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #ff4b2b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #c23616;
+            border-bottom: 2px solid #f0932b;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #f0932b;
+            margin-top: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4b2b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #c23616;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .space-type {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .space-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            color: white;
+        }
+        
+        .trivia {
+            background-color: #74b9ff;
+        }
+        
+        .book {
+            background-color: #55efc4;
+        }
+        
+        .event {
+            background-color: #ffeaa7;
+            color: #2d3436;
+        }
+        
+        .danger {
+            background-color: #fab1a0;
+        }
+        
+        .safe-house {
+            background-color: #a29bfe;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flames of Resistance: Game Rules</h1>
+        
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Welcome to "Flames of Resistance," a board game inspired by Ray Bradbury's dystopian novel "Fahrenheit 451." In this game, you and your fellow players take on the roles of members of the resistance fighting against a society that burns books and suppresses knowledge. Your mission is to preserve literature and gather enough knowledge to keep the flame of resistance alive.</p>
+            
+            <div class="highlight">
+                <h3>Game Objective</h3>
+                <p>As members of the underground resistance, your collective goal is to gather enough Knowledge Points (30) to preserve literature and spark a revolution before the Censorship Level reaches its maximum (20), which would crush the resistance movement.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Game Components</h2>
+            <ul>
+                <li>Game board with 49 spaces</li>
+                <li>Character cards (6 different characters with unique abilities)</li>
+                <li>Trivia cards (15 questions about Fahrenheit 451)</li>
+                <li>Event cards (12 different events)</li>
+                <li>Virtual dice</li>
+                <li>Player tokens</li>
+                <li>Knowledge and Censorship meters</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Setup</h2>
+            <ol>
+                <li>Choose the number of players (2-4)</li>
+                <li>Each player selects a character with a unique special ability</li>
+                <li>Place all player tokens on the starting space ("Resistance HQ")</li>
+                <li>Set the Knowledge Points meter to 0</li>
+                <li>Set the Censorship Level meter to 0</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>How to Play</h2>
+            <h3>Gameplay Overview</h3>
+            <p>Players take turns rolling the dice and moving their token around the board. The type of space a player lands on determines what action they must take. Throughout the game, players will answer trivia questions about Fahrenheit 451, collect books, experience events, and try to avoid the dangers of being caught by the authorities.</p>
+            
+            <h3>On Your Turn</h3>
+            <ol>
+                <li>Roll the dice</li>
+                <li>Move your token the number of spaces shown on the dice (following the path on the board)</li>
+                <li>Perform the action of the space you landed on</li>
+                <li>End your turn</li>
+            </ol>
+            
+            <h3>Board Spaces</h3>
+            <div class="space-type">
+                <div class="space-icon trivia"><i class="fas fa-question"></i></div>
+                <div><strong>Trivia Space:</strong> Answer a trivia question about Fahrenheit 451. If correct, gain 2 Knowledge Points. If incorrect, the Censorship Level increases by 1.</div>
+            </div>
+            
+            <div class="space-type">
+                <div class="space-icon book"><i class="fas fa-book"></i></div>
+                <div><strong>Book Space:</strong> You find a banned book! Gain 1 Knowledge Point and add the book to your personal collection.</div>
+            </div>
+            
+            <div class="space-type">
+                <div class="space-icon event"><i class="fas fa-exclamation"></i></div>
+                <div><strong>Event Space:</strong> Draw an event card and follow its instructions. Events can have positive or negative effects.</div>
+            </div>
+            
+            <div class="space-type">
+                <div class="space-icon danger"><i class="fas fa-fire"></i></div>
+                <div><strong>Danger Space:</strong> You encounter the authorities! The Censorship Level increases by 1.</div>
+            </div>
+            
+            <div class="space-type">
+                <div class="space-icon safe-house"><i class="fas fa-home"></i></div>
+                <div><strong>Safe House Space:</strong> A secure location where you can rest. No action is required, but some character abilities may activate on these spaces.</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Character Abilities</h2>
+            <ul>
+                <li><strong>Guy Montag:</strong> Can move one extra space when escaping from danger spaces</li>
+                <li><strong>Clarisse:</strong> Gains an extra Knowledge Point from trivia questions</li>
+                <li><strong>Faber:</strong> Gains 2 additional Knowledge Points when landing on safe house spaces</li>
+                <li><strong>Granger:</strong> Can reduce Censorship Level by 1 once per game</li>
+                <li><strong>Mildred:</strong> Immune to one fireman encounter per game</li>
+                <li><strong>Captain Beatty:</strong> Can look at event cards before deciding to draw them</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Winning and Losing</h2>
+            <h3>Victory Condition</h3>
+            <p>The resistance wins if the collective Knowledge Points reach 30 before the Censorship Level reaches 20. This represents successfully preserving enough knowledge to keep literature alive.</p>
+            
+            <h3>Defeat Condition</h3>
+            <p>The resistance loses if the Censorship Level reaches 20 before collecting 30 Knowledge Points. This represents the authorities succeeding in stamping out the resistance movement.</p>
+            
+            <div class="highlight">
+                <h3>Individual Achievement</h3>
+                <p>Even though players work collectively toward the victory condition, the player who contributes the most Knowledge Points is recognized as the "Keeper of the Flame" if the resistance wins.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Strategy Tips</h2>
+            <ul>
+                <li>Use character abilities strategically to maximize their effectiveness</li>
+                <li>Try to land on book spaces and answer trivia questions correctly to gain Knowledge Points</li>
+                <li>Avoid danger spaces when possible to keep the Censorship Level low</li>
+                <li>Collaborate with other players to plan moves that benefit the collective goal</li>
+                <li>Remember that while you're competing for individual achievement, the primary goal is for the resistance to win as a group</li>
+            </ul>
+        </div>
+        
+        <a href="../index.html" class="back-button">Back to Game</a>
+    </div>
+</body>
+</html>
